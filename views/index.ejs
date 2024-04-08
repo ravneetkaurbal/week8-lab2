@@ -1,0 +1,36 @@
+<!-- Define a function to render each message -->
+<% function renderMessage(message) { %>
+    <div class="message-preview">
+      <h2>Sender: <%= message.sender %></h2>
+      <p>Recipient: <%= message.recipient %></p>
+      <p><%= message.content %></p>
+    </div>
+  <% } %>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Messages</title>
+      <link rel="stylesheet" href="/css/styles.css" />
+      <!-- Link to external stylesheet -->
+    </head>
+    <body>
+      <nav class="navbar">
+        <h1>My Messages</h1>
+      </nav>
+  
+      <div class="content">
+        <div class="messages">
+          <% if (messages.length > 0) { %>
+            <!-- Call the renderMessage function for each message -->
+            <% messages.forEach(renderMessage); %> 
+          <% } else { %>
+            <p>No messages found.</p>
+          <% } %>
+        </div>
+      </div>
+    </body>
+  </html>
+  

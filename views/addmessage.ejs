@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Message</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Link to external stylesheet -->
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Add Message</h1>
+    </nav>
+
+    <div class="content">
+        <div class="create">
+            <h2>Add a New Message</h2>
+            <form action="/api/messages" method="POST">
+                <label>Sender:</label>
+                <input type="text" id="sender" name="sender" required />
+
+                <label>Recipient:</label>
+                <input type="text" id="recipient" name="recipient" required />
+
+                <label>Content:</label>
+                <textarea id="content" name="content" rows="4" required></textarea><br />
+
+                <button type="submit">Add Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
